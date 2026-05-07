@@ -1,6 +1,6 @@
 AFK Manager
 BOOTH 配布パッケージ案内
-version: 2.0.0
+version: 2.0.1
 
 このツールは、VRChat アバターの AFK アニメーションを非破壊で管理する NDMF プラグインです。
 複数の AFK モーションを Expression Menu から切り替えたり、元の AFK との入れ替え・追加・削除を Inspector から行えます。

@@ -2,6 +2,12 @@
 
 このファイルは `AFK Manager` の変更履歴を管理します。
 
+## [2.0.1] - 2026-05-07
+
+### Removed
+
+- ControllerDumper（デバッグ用 AnimatorController ダンプ機能）。Tools / Assets / Hierarchy メニューから削除。本機能は別リポ（個人ツール化）への分離方針に伴い AFK Manager の公開スコープから除外
+
 ## [2.0.0] - 2026-04-18
 
 重要: ツール名変更（AFK Changer → AFK Manager）。package ID (`com.sebanne.afk-changer`) は v1.x との互換性のため維持しています。

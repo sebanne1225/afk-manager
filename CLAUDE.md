@@ -57,7 +57,6 @@ Component/Inspector 詳細設計確定（付け外し型 UI）。
 - AfkOperationContext: ForAction / ForFxLayer ファクトリ。NeedsBlendOut / NeedsBehaviours / EntryBlendDuration を保持
 - AfkMenuGenerator: MA Menu Item + Parameters をビルド時生成（#if HAS_MODULAR_AVATAR。Generating フェーズ）
 - AfkManagerPlugin: NDMF 2パス（Pass 1: Generating で MA 生成、Pass 2: Transforming.AfterPlugin("MA") で実操作）。ProcessAction / ProcessFx で操作を分離。複数スロット対応
-- ControllerDumper: Tools メニュー / Assets 右クリック / Hierarchy 右クリックの3箇所起動。毎回新規ファイル生成（dump_{name}_{timestamp}.txt）
 - AfkManagerEditor: Custom Editor。単一 ReorderableList 型 UI（VirtualRow モデル + dispatch 型描画）。Action セクション（元 AFK 行統合、★ バッジ、P3 空時ピッカー、全体 D&D + ホバー視覚フィードバック）+ FX セクション。スロットごとスキャンキャッシュ、MA 必須判定
 - ActionControllerResolver: Descriptor → 指定レイヤー → AnimatorController 取得ロジック共通化（AnimLayerType パラメータ化済み）
 - AfkStateScanner.ScanFxLayers: FX コントローラーの全レイヤーを走査し、AFK ステートを持つレイヤーの結果をリストで返す
@@ -130,7 +129,6 @@ Component/Inspector 詳細設計確定（付け外し型 UI）。
 - `Editor/Core/AfkOperationContext.cs` — 操作コンテキスト（ForAction / ForFxLayer ファクトリ）
 - `Editor/Core/AfkMenuGenerator.cs` — MA Menu Item + Parameters 生成（#if HAS_MODULAR_AVATAR）
 - `Editor/Core/AfkLog.cs` — ログユーティリティ（[AFK Manager] プレフィックス）
-- `Editor/Debug/ControllerDumper.cs` — AnimatorController 構造ダンプ（Tools / Assets / Hierarchy メニュー）
 
 ## AFK ステート構造の実態
 
