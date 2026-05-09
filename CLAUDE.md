@@ -11,6 +11,8 @@ UI モデル転換 段階 1（データ層 + ビルド時処理層）完了。`o
 UI モデル転換 段階 2（Inspector UI 刷新）完了。単一 ReorderableList 型 UI（VirtualRow モデル + dispatch 型描画。元 AFK 行 + 追加スロット行を同一リストに統合）、「元の AFK を含める」Toggle 常時表示、元 AFK 行の 2 行レイアウト（固定ラベル「元の AFK」+ スキャン結果 miniLabel + メニュー名 PropertyField）、★ バッジ（effectiveSlotCount >= 2 の先頭行）、P3 空時ピッカー（「アバター一覧から選ぶ ▼」+ サブテキスト）、Drop Area 統合（ReorderableList 全体を D&D 受付 + ホバー時に薄青オーバーレイ）、fallback hint miniLabel 文言に ★ 付加。
 2.0.0 公開完了: tag 2.0.0 / GitHub Release / VPM listing 反映 / VCC 実機動作確認 / BOOTH 更新（タイトル / 説明文 / タグ / zip）。
 closeout 後に BOOTH_PACKAGE 文言を購入者向けに改善（commit `1f48c38`）。
+2.0.1 patch リリース完了 (2026-05-07): デバッグ用 Editor/Debug/ControllerDumper.cs (365 行) を削除 (commit `e63c9a7` + `311e1d3`)。本機能は別リポ (sebanne-dumpers、private 開発継続) へ移行済 (afk-manager 公開スコープから除外)。BOOTH 更新スキップ (商品本文に Debug 機能の記載なし、本 patch でユーザー視点の機能変化なし)。
+ActionControllerResolver は本体機能で使用継続中 (削除対象外)。
 
 Step 1（土台）完了: namespace 変更（Sebanne.AfkChanger → Sebanne.AfkManager）、ファイルリネーム、Component フィールド刷新（付け外し型 UI のデータモデル）、asmdef に MA Version Defines 追加。Plugin は最小適応（actionSources[0] 読み出し + removeFxAfk）。
 Step 2（Inspector）完了: 付け外し型 UI 実装。Action セクション（ReorderableList でスロット一覧、スキャン結果表示、MA 必須判定 + Warning/Info）、FX セクション（スキャン結果 + 削除チェックボックス）。
